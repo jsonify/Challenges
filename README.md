@@ -1,8 +1,5 @@
 ## `Challenge Exercises` App Directory 
 
-<img align="left" src="Previews/pushit-dark.jpg" width="280"> <img align="left" src="Previews/pushit-light.jpg" width="280">
-
-
 ### About
 Push-It is my 30 day push up tracker app for helping you achieve your hopes and dreams by way of physically pushing yourself up off the ground.
 
@@ -26,7 +23,7 @@ Build and Run
 
 ## Push It
 
-<img align="left" src="Previews/pushit-dark.jpg" width="280">
+<img align="left" src="Previews/pushit-dark.jpg" width="250">
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
