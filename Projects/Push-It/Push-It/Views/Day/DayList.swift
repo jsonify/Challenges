@@ -58,14 +58,17 @@ struct DayList: View {
 //                print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)
 
             }
-            .navigationBarTitle("Push It!", displayMode: .inline)
+            .navigationBarTitle("Push It!")
             .navigationBarItems(trailing:
                 NavigationLink(destination: SettingsView(userData: userData)) {
-                    Image(systemName: "gear")
+                    Image(systemName: "line.horizontal.3")
+                        .font(.title)
+                        .padding(5)
                 }
             )
-        }
+        } 
         .accentColor(Color("Accent"))
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

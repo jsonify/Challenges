@@ -12,6 +12,17 @@
 		4C016B602457F5EC007E7D44 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C016B5F2457F5EC007E7D44 /* Extensions.swift */; };
 		4C206CE0244974A800347FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C206CDF244974A800347FC3 /* Assets.xcassets */; };
 		4C206CE2244A19AD00347FC3 /* RepButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C206CE1244A19AD00347FC3 /* RepButtonView.swift */; };
+		4C24684A2465E58E0002546E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2468482465E58E0002546E /* Interface.storyboard */; };
+		4C24684C2465E58F0002546E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C24684B2465E58F0002546E /* Assets.xcassets */; };
+		4C2468532465E58F0002546E /* Watch-Push-It Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C2468522465E58F0002546E /* Watch-Push-It Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C2468582465E58F0002546E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2468572465E58F0002546E /* ContentView.swift */; };
+		4C24685A2465E58F0002546E /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2468592465E58F0002546E /* HostingController.swift */; };
+		4C24685C2465E58F0002546E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24685B2465E58F0002546E /* ExtensionDelegate.swift */; };
+		4C24685E2465E58F0002546E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24685D2465E58F0002546E /* NotificationController.swift */; };
+		4C2468602465E58F0002546E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24685F2465E58F0002546E /* NotificationView.swift */; };
+		4C2468622465E58F0002546E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2468612465E58F0002546E /* Assets.xcassets */; };
+		4C2468652465E58F0002546E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2468642465E58F0002546E /* Preview Assets.xcassets */; };
+		4C24686A2465E58F0002546E /* Watch-Push-It.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C2468462465E58E0002546E /* Watch-Push-It.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C79D04B244EA9C8003D8074 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79D04A244EA9C8003D8074 /* Webview.swift */; };
 		4C79D04D244EB688003D8074 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79D04C244EB688003D8074 /* ThanksView.swift */; };
 		4C79D04F244EC0C4003D8074 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C79D04E244EC0C4003D8074 /* Default-568h@2x.png */; };
@@ -41,12 +52,68 @@
 		4CFBF26D244E66B500E0D2BF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBF26C244E66B400E0D2BF /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4C2468542465E58F0002546E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CCB97F42446DEA800F307D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C2468512465E58F0002546E;
+			remoteInfo = "Watch-Push-It Extension";
+		};
+		4C2468682465E58F0002546E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CCB97F42446DEA800F307D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C2468452465E58E0002546E;
+			remoteInfo = "Watch-Push-It";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C24686B2465E58F0002546E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4C24686A2465E58F0002546E /* Watch-Push-It.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C24686E2465E58F0002546E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C2468532465E58F0002546E /* Watch-Push-It Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4C016B5B2457F312007E7D44 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
 		4C016B5D2457F59C007E7D44 /* StoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewManager.swift; sourceTree = "<group>"; };
 		4C016B5F2457F5EC007E7D44 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C206CDF244974A800347FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C206CE1244A19AD00347FC3 /* RepButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepButtonView.swift; sourceTree = "<group>"; };
+		4C2468462465E58E0002546E /* Watch-Push-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch-Push-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2468492465E58E0002546E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4C24684B2465E58F0002546E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C24684D2465E58F0002546E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2468522465E58F0002546E /* Watch-Push-It Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch-Push-It Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2468572465E58F0002546E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C2468592465E58F0002546E /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		4C24685B2465E58F0002546E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4C24685D2465E58F0002546E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4C24685F2465E58F0002546E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4C2468612465E58F0002546E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C2468642465E58F0002546E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C2468662465E58F0002546E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2468672465E58F0002546E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4C79D04A244EA9C8003D8074 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 		4C79D04C244EB688003D8074 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		4C79D04E244EC0C4003D8074 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -78,6 +145,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C24684F2465E58F0002546E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CCB97F92446DEA800F307D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,11 +163,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C2468472465E58E0002546E /* Watch-Push-It */ = {
+			isa = PBXGroup;
+			children = (
+				4C2468482465E58E0002546E /* Interface.storyboard */,
+				4C24684B2465E58F0002546E /* Assets.xcassets */,
+				4C24684D2465E58F0002546E /* Info.plist */,
+			);
+			path = "Watch-Push-It";
+			sourceTree = "<group>";
+		};
+		4C2468562465E58F0002546E /* Watch-Push-It Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C2468572465E58F0002546E /* ContentView.swift */,
+				4C2468592465E58F0002546E /* HostingController.swift */,
+				4C24685B2465E58F0002546E /* ExtensionDelegate.swift */,
+				4C24685D2465E58F0002546E /* NotificationController.swift */,
+				4C24685F2465E58F0002546E /* NotificationView.swift */,
+				4C2468612465E58F0002546E /* Assets.xcassets */,
+				4C2468662465E58F0002546E /* Info.plist */,
+				4C2468672465E58F0002546E /* PushNotificationPayload.apns */,
+				4C2468632465E58F0002546E /* Preview Content */,
+			);
+			path = "Watch-Push-It Extension";
+			sourceTree = "<group>";
+		};
+		4C2468632465E58F0002546E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C2468642465E58F0002546E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		4CCB97F32446DEA800F307D2 = {
 			isa = PBXGroup;
 			children = (
 				4C79D04E244EC0C4003D8074 /* Default-568h@2x.png */,
 				4CCB97FE2446DEA800F307D2 /* Push-It */,
+				4C2468472465E58E0002546E /* Watch-Push-It */,
+				4C2468562465E58F0002546E /* Watch-Push-It Extension */,
 				4CCB97FD2446DEA800F307D2 /* Products */,
 				4CFBF262244ACFB700E0D2BF /* Frameworks */,
 			);
@@ -103,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				4CCB97FC2446DEA800F307D2 /* Push It.app */,
+				4C2468462465E58E0002546E /* Watch-Push-It.app */,
+				4C2468522465E58F0002546E /* Watch-Push-It Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +331,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C2468452465E58E0002546E /* Watch-Push-It */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C2468722465E58F0002546E /* Build configuration list for PBXNativeTarget "Watch-Push-It" */;
+			buildPhases = (
+				4C2468442465E58E0002546E /* Resources */,
+				4C24686E2465E58F0002546E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C2468552465E58F0002546E /* PBXTargetDependency */,
+			);
+			name = "Watch-Push-It";
+			productName = "Watch-Push-It";
+			productReference = 4C2468462465E58E0002546E /* Watch-Push-It.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4C2468512465E58F0002546E /* Watch-Push-It Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C2468712465E58F0002546E /* Build configuration list for PBXNativeTarget "Watch-Push-It Extension" */;
+			buildPhases = (
+				4C24684E2465E58F0002546E /* Sources */,
+				4C24684F2465E58F0002546E /* Frameworks */,
+				4C2468502465E58F0002546E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch-Push-It Extension";
+			productName = "Watch-Push-It Extension";
+			productReference = 4C2468522465E58F0002546E /* Watch-Push-It Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		4CCB97FB2446DEA800F307D2 /* Push-It */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CCB98102446DEAA00F307D2 /* Build configuration list for PBXNativeTarget "Push-It" */;
@@ -227,10 +373,12 @@
 				4CCB97F92446DEA800F307D2 /* Frameworks */,
 				4CFBF261244AC6E900E0D2BF /* ShellScript */,
 				4CCB97FA2446DEA800F307D2 /* Resources */,
+				4C24686B2465E58F0002546E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C2468692465E58F0002546E /* PBXTargetDependency */,
 			);
 			name = "Push-It";
 			packageProductDependencies = (
@@ -250,6 +398,12 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jason Rueckert";
 				TargetAttributes = {
+					4C2468452465E58E0002546E = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					4C2468512465E58F0002546E = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					4CCB97FB2446DEA800F307D2 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -272,11 +426,31 @@
 			projectRoot = "";
 			targets = (
 				4CCB97FB2446DEA800F307D2 /* Push-It */,
+				4C2468452465E58E0002546E /* Watch-Push-It */,
+				4C2468512465E58F0002546E /* Watch-Push-It Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C2468442465E58E0002546E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C24684C2465E58F0002546E /* Assets.xcassets in Resources */,
+				4C24684A2465E58E0002546E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C2468502465E58F0002546E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C2468652465E58F0002546E /* Preview Assets.xcassets in Resources */,
+				4C2468622465E58F0002546E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CCB97FA2446DEA800F307D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +487,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C24684E2465E58F0002546E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C24685A2465E58F0002546E /* HostingController.swift in Sources */,
+				4C2468582465E58F0002546E /* ContentView.swift in Sources */,
+				4C24685E2465E58F0002546E /* NotificationController.swift in Sources */,
+				4C24685C2465E58F0002546E /* ExtensionDelegate.swift in Sources */,
+				4C2468602465E58F0002546E /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CCB97F82446DEA800F307D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,7 +533,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4C2468552465E58F0002546E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C2468512465E58F0002546E /* Watch-Push-It Extension */;
+			targetProxy = 4C2468542465E58F0002546E /* PBXContainerItemProxy */;
+		};
+		4C2468692465E58F0002546E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C2468452465E58E0002546E /* Watch-Push-It */;
+			targetProxy = 4C2468682465E58F0002546E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		4C2468482465E58E0002546E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C2468492465E58E0002546E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		4CCB980A2446DEAA00F307D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,6 +566,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C24686C2465E58F0002546E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZD57UD8UQ;
+				IBSC_MODULE = Watch_Push_It_Extension;
+				INFOPLIST_FILE = "Watch-Push-It/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		4C24686D2465E58F0002546E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZD57UD8UQ;
+				IBSC_MODULE = Watch_Push_It_Extension;
+				INFOPLIST_FILE = "Watch-Push-It/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		4C24686F2465E58F0002546E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch-Push-It Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = TZD57UD8UQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Watch-Push-It Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		4C2468702465E58F0002546E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch-Push-It Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = TZD57UD8UQ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Watch-Push-It Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 		4CCB980E2446DEAA00F307D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -487,11 +780,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it";
 				PRODUCT_NAME = "Push It";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -509,17 +802,35 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it";
 				PRODUCT_NAME = "Push It";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C2468712465E58F0002546E /* Build configuration list for PBXNativeTarget "Watch-Push-It Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C24686F2465E58F0002546E /* Debug */,
+				4C2468702465E58F0002546E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2468722465E58F0002546E /* Build configuration list for PBXNativeTarget "Watch-Push-It" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C24686C2465E58F0002546E /* Debug */,
+				4C24686D2465E58F0002546E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4CCB97F72446DEA800F307D2 /* Build configuration list for PBXProject "Push-It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

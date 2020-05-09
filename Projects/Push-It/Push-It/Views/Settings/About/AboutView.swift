@@ -60,6 +60,30 @@ struct AboutView: View {
                     }
                     
                     HStack {
+                        Image(systemName: "eye.fill")
+                        .font(.system(size: 18))
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                        .background(Color(#colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)))
+                        .cornerRadius(5)
+                        NavigationLink(destination: Webview(url: "https://jasonrueckert.com/push-it-privacy")) {
+                            Text("Privacy Policy")
+                        }
+                    }
+                    
+                    HStack {
+                        Image(systemName: "globe")
+                        .font(.system(size: 20))
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                        .background(Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)))
+                        .cornerRadius(5)
+                        NavigationLink(destination: Webview(url: "https://jasonrueckert.com/")) {
+                            Text("Developer Website")
+                        }
+                    }
+                    
+                    HStack {
                         Image(systemName: "smiley.fill")
                             .font(.system(size: 20))
                             .frame(width: 30, height: 30)
