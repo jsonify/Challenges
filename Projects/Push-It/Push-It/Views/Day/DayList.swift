@@ -55,7 +55,7 @@ struct DayList: View {
             }
             .onAppear {
                 self.totalReps = UserDefaults.standard.integer(forKey: "totalReps")
-//                print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)
+                print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!)
 
             }
             .navigationBarTitle("Push It!")

@@ -13,12 +13,17 @@ struct SettingsView: View {
     @ObservedObject var userData: UserData
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var showResetAll = false
+    @State private var showResetDaily = false
+    @State private var version = ""
+    
+    
     var body: some View {
         ZStack {
             Color("background1")
                 .edgesIgnoringSafeArea(.all)
             
-            List {
+            Form {
                 Toggle("", isOn: $userData.showCompletedOnly)
                     .toggleStyle(ColoredToggleStyle(
                         label: "Show Completed Days",
@@ -29,20 +34,49 @@ struct SettingsView: View {
                     Text("About Push It")
                 }
                 
-                //
-                //                    NavigationLink(destination: PurchaseView()) {
-                //                        Text("Push-It Pro")
+                Section(header: Text("Danger Zone!")) {
+                    Text("Reset Daily Progress Only")
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .onTapGesture {
+                            self.showResetDaily.toggle()
+                            self.version = "partial"
+                    }
+                    
+                    Text("Reset All Progress")
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .onTapGesture {
+                            self.showResetAll.toggle()
+                            self.version = "all"
+                    }
+                }
+        
+                .foregroundColor(Color("Accent"))
+                
+                ZStack {
+                    ResetView(showing: self.$showResetDaily, version: version, userData: userData)
+                        .scaleEffect(showResetDaily ? 1 : 0.001 , anchor: .center)
+                        .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                    
+                    ResetView(showing: self.$showResetAll, version: version, userData: userData)
+                        .scaleEffect(showResetAll ? 1 : 0.001 , anchor: .center)
+                        .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                }
             }
+            
+            Spacer()
         }
         .navigationBarTitle("Settings", displayMode: .inline)
-            
-        .accentColor(Color("Accent"))
+        .onAppear(perform: {
+            UITableView.appearance().separatorStyle = .none
+        })
+            .accentColor(Color("Accent"))
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(userData: UserData())
+            .environment(\.colorScheme, .dark)
     }
 }
 
@@ -70,7 +104,7 @@ struct ColoredToggleStyle: ToggleStyle {
                     .onTapGesture { configuration.isOn.toggle() }
             }
         }
-//        .font(.title)
-//        .padding(.horizontal)
+        //        .font(.title)
+        //        .padding(.horizontal)
     }
 }

@@ -22,6 +22,7 @@ struct ButtonView: View {
                 .padding(.leading, -55)
             Spacer()
             HStack {
+//                RepSquare(repCount: "\(rep1)")
                 Image(systemName: "\(rep1)")
                 .font(.system(size: 30.0))
                 Image(systemName: "\(rep2)")
@@ -48,7 +49,25 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(image: "1.circle.fill", rep1: "2.square.fill", rep2: "2.square.fill", rep3: "2.square.fill", rep4: "2.square.fill")
-//            .environment(\.colorScheme, .dark)
+        Group {
+            ButtonView(image: "1.circle.fill", rep1: "2.square.fill", rep2: "2.square.fill", rep3: "2.square.fill", rep4: "2.square.fill")
+                .environment(\.colorScheme, .dark)
+            
+            RepSquare(repCount: "100")
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
+
+struct RepSquare: View {
+    var repCount: String
+    
+    var body: some View {
+        Text("\(repCount)")
+            .frame(width: 28, height: 28)
+            .foregroundColor(Color("background1"))
+            .background(Color.primary)
+        .cornerRadius(5)
+    }
+}
+

@@ -194,11 +194,6 @@ struct DayDetail: View {
             
         }
         .navigationBarTitle(Text("Day \(day.day)"), displayMode: .inline)
-            //    .navigationBarItems(trailing:
-            //        Button("Check") {
-            //            print(self.addReps)
-            //        }
-            //            )
             .alert(isPresented: $showingCompletedAlert) {
                 Alert(title: Text(completionTitle), message: Text(completionMessage), dismissButton: .default(Text("Continue")){
                     self.userData.days[self.dayIndex].isComplete.toggle()

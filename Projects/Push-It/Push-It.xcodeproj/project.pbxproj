@@ -10,6 +10,8 @@
 		4C016B5C2457F312007E7D44 /* StoreKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C016B5B2457F312007E7D44 /* StoreKitHelper.swift */; };
 		4C016B5E2457F59C007E7D44 /* StoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C016B5D2457F59C007E7D44 /* StoreReviewManager.swift */; };
 		4C016B602457F5EC007E7D44 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C016B5F2457F5EC007E7D44 /* Extensions.swift */; };
+		4C191E06248D97ED001C7020 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191E05248D97ED001C7020 /* ResetView.swift */; };
+		4C191E08248E028B001C7020 /* ResetDailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191E07248E028B001C7020 /* ResetDailyView.swift */; };
 		4C206CE0244974A800347FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C206CDF244974A800347FC3 /* Assets.xcassets */; };
 		4C206CE2244A19AD00347FC3 /* RepButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C206CE1244A19AD00347FC3 /* RepButtonView.swift */; };
 		4C79D04B244EA9C8003D8074 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79D04A244EA9C8003D8074 /* Webview.swift */; };
@@ -58,6 +60,8 @@
 		4C016B5B2457F312007E7D44 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
 		4C016B5D2457F59C007E7D44 /* StoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewManager.swift; sourceTree = "<group>"; };
 		4C016B5F2457F5EC007E7D44 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4C191E05248D97ED001C7020 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
+		4C191E07248E028B001C7020 /* ResetDailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetDailyView.swift; sourceTree = "<group>"; };
 		4C206CDF244974A800347FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C206CE1244A19AD00347FC3 /* RepButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepButtonView.swift; sourceTree = "<group>"; };
 		4C79D04A244EA9C8003D8074 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
@@ -157,9 +161,9 @@
 		4CCB98222446E01600F307D2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4CCB98502446E21300F307D2 /* UserData.swift */,
 				4CCB984C2446E08700F307D2 /* regimentData.json */,
 				4CCB98232446E01600F307D2 /* Data.swift */,
-				4CCB98502446E21300F307D2 /* UserData.swift */,
 				4CCB98242446E01600F307D2 /* ButtonViewCompleted.swift */,
 				4CCB98262446E01600F307D2 /* Bundle-Decodable.swift */,
 				4CCB98272446E01600F307D2 /* ButtonCircleView.swift */,
@@ -224,6 +228,8 @@
 				4CCB98302446E02600F307D2 /* SettingsView.swift */,
 				4CCB98312446E02600F307D2 /* StatsView.swift */,
 				4CFBF267244AD49800E0D2BF /* PurchaseView.swift */,
+				4C191E05248D97ED001C7020 /* ResetView.swift */,
+				4C191E07248E028B001C7020 /* ResetDailyView.swift */,
 				4CFBF26E244E66C100E0D2BF /* About */,
 			);
 			path = Settings;
@@ -355,6 +361,8 @@
 				4CCB984F2446E0A600F307D2 /* AppView.swift in Sources */,
 				4CCB983B2446E02600F307D2 /* DayCircle.swift in Sources */,
 				4CCB98512446E21300F307D2 /* UserData.swift in Sources */,
+				4C191E06248D97ED001C7020 /* ResetView.swift in Sources */,
+				4C191E08248E028B001C7020 /* ResetDailyView.swift in Sources */,
 				4CCB982E2446E01600F307D2 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it";
 				PRODUCT_NAME = "Push It";
 				SWIFT_VERSION = 5.0;
@@ -523,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonrueckert.push-it";
 				PRODUCT_NAME = "Push It";
 				SWIFT_VERSION = 5.0;
