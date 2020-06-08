@@ -12,14 +12,14 @@ import Combine
 final class UserData: ObservableObject {
     static let totalReps = "totalReps"
     static let difficulty = "difficulty"
-    
-    @Published var showCompletedOnly: Bool = UserDefaults.standard.bool(forKey: "showCompletedOnly") {
-        didSet {
-            UserDefaults.standard.set(self.showCompletedOnly, forKey: "showCompletedOnly")
-        }
-    }
-    
+    static let showCompletedOnly = "showCompletedOnly"
     @Published var days = dayData
+    
+    @Published var showCompletedOnly: Bool = true {
+        didSet {
+            UserDefaults.standard.set(showCompletedOnly, forKey: Self.showCompletedOnly)
+        }
+    }    
     
     @Published var totalReps: Int {
         didSet {
